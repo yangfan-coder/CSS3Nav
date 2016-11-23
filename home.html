@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>css3滑动导航</title>
+</head>
+<style>
+	* { padding: 0; margin: 0; }
+	#nav { margin-top: 40px; width: 800px; position: relative; }
+	#nav a { color: #666; text-decoration: none; display: block; float: left; width: 100px; text-align: center; line-height: 40px; font-size: 14px; font-family: "微软雅黑"; position: relative; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; -ms-transition: all .5s ease; -o-transition: all .5s ease; transition: all .5s ease; }
+	.active { width: 100px; height: 40px; background: #ffb61a; position: absolute; left: 0px; top: 0px; z-index: 0; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; -ms-transition: all .5s ease; -o-transition: all .5s ease; transition: all .5s ease; z-index: -1 }
+	#nav a:nth-of-type(1):hover~ .active { left: 0px; }
+	#nav a:nth-of-type(2):hover~ .active { left: 100px; }
+	#nav a:nth-of-type(3):hover~ .active { left: 200px; }
+	#nav a:nth-of-type(4):hover~ .active { left: 300px; }
+	#nav a:nth-of-type(5):hover~ .active { left: 400px; }
+	#nav a:nth-of-type(6):hover~ .active { left: 500px; }
+	#nav a:nth-of-type(1):hover, #nav>a:nth-of-type(2):hover, #nav>a:nth-of-type(3):hover, #nav>a:nth-of-type(4):hover, #nav>a:nth-of-type(5):hover, #nav>a:nth-of-type(6):hover { color: #fff; }
+</style>
+<body>
+<div id="nav">
+ 	 <a  href="javascript:;" >首页</a>
+	 <a href="javascript:;" >产品</a>
+	 <a href="javascript:;" >案例</a>
+	 <a href="javascript:;" >价格</a>
+	 <a href="javascript:;" >关于</a>
+	 <a href="javascript:;">帮助</a>
+	 <div class="active"></div>
+</div>
+</body>
+</html>
